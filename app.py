@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')
 # Page config
 st.set_page_config(
     page_title="AI Equity Research Analyzer",
-    page_icon="📈",
+    page_icon="",
     layout="wide"
 )
 
@@ -108,17 +108,17 @@ def calculate_factor_score(metrics):
     return scores
 
 # Main App
-st.title("📈 AI Equity Research Analyzer")
+st.title(" AI Equity Research Analyzer")
 st.markdown("### **Next-Generation Investment Intelligence Platform**")
-st.markdown("*Built for Nomura Equity Research & Wholesale Strategy*")
+
 
 # Tabs
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "🎯 Company Analysis",
-    "💰 DCF Valuation",
-    "📊 Factor Screening",
-    "🏢 Peer Comparison",
-    "🔍 Competitive Intelligence"
+    " Company Analysis",
+    " DCF Valuation",
+    " Factor Screening",
+    " Peer Comparison",
+    " Competitive Intelligence"
 ])
 
 # TAB 1: Company Analysis
@@ -449,7 +449,7 @@ with tab3:
                 
                 for idx, (col, row) in enumerate(zip([col1, col2, col3], top_3.iterrows())):
                     with col:
-                        rank_emoji = ["🥇", "🥈", "🥉"][idx]
+                        rank_emoji = ["1ST", "2ND", "3RD"][idx]
                         st.markdown(f"### {rank_emoji} {row[1]['Ticker']}")
                         st.metric("Composite Score", f"{row[1]['Composite Score']:.1f}")
                         st.metric("Current Price", f"${row[1]['Price']:.2f}")
@@ -756,10 +756,4 @@ with tab5:
 
 # Footer
 st.markdown("---")
-st.markdown("""
-    <div style='text-align: center; color: #888;'>
-        <p><b>AI Equity Research Analyzer</b> | Built for Nomura Equity Research & Strategy</p>
-        <p>Fundamental Analysis • DCF Valuation • Factor Screening • Competitive Intelligence</p>
-        <p>Technologies: Python • Streamlit • YFinance • NLP • Data Analytics</p>
-    </div>
-""", unsafe_allow_html=True)
+
